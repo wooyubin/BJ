@@ -15,4 +15,3 @@ if km < 0 :
         h = 23
 
 print(h, km)
-
