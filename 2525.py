@@ -7,17 +7,15 @@ h, m = map(int, input().split())
 km = int(input())
 kmm = m + km
 
-
 if kmm >= 60 :
-    a = int(kmm / 60)
+    a = int(kmm // 60)
     h += a
     b = int(kmm % 60)
-    if h > 24 :
-        h = 0
+    if h >= 24 :
+        h = h - 24
+        print(h, b)
+    else :
         print(h, b)
 
 elif kmm < 60 :
-    if h > 24 :
-        h = 0
-
-    print(h, kmm)
+        print(h, kmm)
